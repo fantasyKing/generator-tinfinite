@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "start": "gulp"
+    "start": "babel-node ./src/index.js",
+    "startdev": "gulp"
   },
   "author": "<%= projectAuthor %>",
   "license": "ISC",

@@ -98,7 +98,60 @@ module.exports = generators.Base.extend({
         }
       );
     },
-    
+    makefile() {
+      this.fs.copy(
+        this.templatePath('Makefile.template'),
+        this.destinationPath('Makefile')
+      );
+    },
+    gitignore() {
+      this.fs.copy(
+        this.templatePath('gitignore.template'),
+        this.destinationPath('.gitignore')
+      );
+    },
+    eslintrc() {
+      this.fs.copy(
+        this.templatePath('eslintrc.template'),
+        this.destinationPath('.eslintrc')
+      );
+    },
+    babelrc() {
+      this.fs.copy(
+        this.templatePath('babelrc.template'),
+        this.destinationPath('.babelrc')
+      );
+    },
+    npmignore() {
+      this.fs.copy(
+        this.templatePath('npmignore.template'),
+        this.destinationPath('.npmignore')
+      );
+    },
+    gulpfile() {
+      this.fs.copy(
+        this.templatePath('gulpfile.template'),
+        this.destinationPath('gulpfile.js')
+      );
+    },
+    webpackfile() {
+      this.fs.copy(
+        this.templatePath('webpack.config.template'),
+        this.destinationPath('webpack.config.js')
+      );
+    },
+    logfile() {
+      this.fs.copy(
+        this.templatePath('logs/'),
+        this.destinationPath('logs/')
+      );
+    },
+    srcfile() {
+      this.fs.copy(
+        this.templatePath('src/'),
+        this.destinationPath('src/')
+      );
+    }
   },
   install() {
     this.log('start install');
