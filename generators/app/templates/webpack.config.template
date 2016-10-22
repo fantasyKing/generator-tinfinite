@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Created on 11/3/15.
+ * Created on <%= time %>.
  */
 const webpack = require('webpack');
 const path = require('path');

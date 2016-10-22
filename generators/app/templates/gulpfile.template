@@ -1,4 +1,7 @@
 'user strict';
+/**
+ * Created on <%= time %>.
+ */
 const gulp = require('gulp');
 const	server = require('gulp-develop-server');
 const	webpack = require('webpack');

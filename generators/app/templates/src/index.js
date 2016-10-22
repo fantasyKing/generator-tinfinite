@@ -1,5 +1,5 @@
 /**
- * Created on 7/28/16.
+ * Created on <%= time %>.
  */
 import HTTP from './server/http';
 import ms_utils from 'ms-utils';

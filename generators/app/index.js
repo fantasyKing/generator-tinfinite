@@ -2,6 +2,7 @@ const path       = require('path');
 const yosay      = require('yosay');
 const to         = require('to-case');
 const generators = require('yeoman-generator');
+const moment = require('moment');
 /**
  * initializing, prompting, configuring, default, writing, conflicts, install, end
  */
@@ -17,6 +18,9 @@ module.exports = generators.Base.extend({
         '\'Allo \'allo! Out of the box I include Express and Mongoose, as well as a' +
         'few other goodies, to build your rest api Server.'
       ));
+    },
+    showTime() {
+      moment().format('L');
     }
   },
   prompting: {
@@ -66,9 +70,7 @@ module.exports = generators.Base.extend({
   configuring: {
     config() {
       this.log('starting run configuring');
-    },
-    fixapp() {
-      this.log('template path', this.sourceRoot());
+      this.createTime = moment().format('L');
     }
   },
   default() {
@@ -129,27 +131,43 @@ module.exports = generators.Base.extend({
       );
     },
     gulpfile() {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('gulpfile.template'),
-        this.destinationPath('gulpfile.js')
+        this.destinationPath('gulpfile.js'), {
+          time: this.createTime
+        }
       );
     },
     webpackfile() {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('webpack.config.template'),
-        this.destinationPath('webpack.config.js')
+        this.destinationPath('webpack.config.js'), {
+          time: this.createTime
+        }
       );
     },
     logfile() {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('logs/'),
-        this.destinationPath('logs/')
+        this.destinationPath('logs/'), {
+          time: this.createTime
+        }
       );
     },
     srcfile() {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('src/'),
-        this.destinationPath('src/')
+        this.destinationPath('src/'), {
+          time: this.createTime
+        }
+      );
+    },
+    testfile() {
+      this.fs.copyTpl(
+        this.templatePath('test/'),
+        this.destinationPath('test/'), {
+          time: this.createTime
+        }
       );
     }
   },

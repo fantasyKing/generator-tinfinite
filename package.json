@@ -22,6 +22,7 @@
     "eslint-plugin-react": "^6.4.1"
   },
   "dependencies": {
+    "moment": "^2.15.1",
     "to-case": "^2.0.0",
     "yeoman-generator": "^0.24.1",
     "yosay": "^1.2.1"

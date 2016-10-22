@@ -1,3 +1,6 @@
+/**
+ * Created on <%= time %>.
+ */
 import express from 'express';
 import bodyParser from 'body-parser';
 import compression from 'compression';
