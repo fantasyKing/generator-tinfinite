@@ -1,5 +1,5 @@
 {
-  "name": "generator-test",
+  "name": "generator-tinfinite",
   "version": "1.0.0",
   "description": "Yeoman generator for creating RESTful NodeJS APIs",
   "main": "index.js",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "to-case": "^2.0.0",
+    "yeoman-generator": "^0.24.1",
     "yosay": "^1.2.1"
   }
 }
