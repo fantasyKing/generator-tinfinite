@@ -1,0 +1,28 @@
+{
+  "name": "generator-test",
+  "version": "1.0.0",
+  "description": "Yeoman generator for creating RESTful NodeJS APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "files": [
+    "generators/app"
+  ],
+  "keywords": [
+    "[yeoman-generator]"
+  ],
+  "author": "zhanggj",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.8.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1"
+  },
+  "dependencies": {
+    "to-case": "^2.0.0",
+    "yosay": "^1.2.1"
+  }
+}
